@@ -1,0 +1,23 @@
+﻿@model Drink
+
+<div class="col-lg-4 col-sm-12 col-md-6 align-content-center mb-4">
+    <div class="card text-center">
+
+        <img class="card-img-top" src="@Model.ImageThumbnailUrl" alt="" />
+
+        <div class="card-body">
+            <h5>@(Model.CategoryId == 1? "Alcoholic" : "Non-alcoholic")</h5>
+            <h4 class="card-title"><strong><a href="">@Model.Name</a></strong></h4>
+
+            <p>@Model.ShortDescription</p>
+        </div>
+        <div class="card-footer mx-3 bg-transparent">
+            <h3 class="float-left">@Model.Price &euro;</h3>
+            <div class="float-right">
+                <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fas fa-eye mr-3"></i></a>
+                <a data-toggle="tooltip" data-placement="top" title="Add to Cart"><i class="fas fa-cart-plus"></i></a>
+                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fas fa-heart"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
