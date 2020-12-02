@@ -149,3 +149,10 @@ D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\DrinkAndGo.csproj.CoreC
 D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\DrinkAndGo.MvcApplicationPartsAssemblyInfo.cache
 D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_drinkCard.cshtml.g.cs
 D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\Index.cshtml.g.cs
+D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Carousel.cshtml.g.cs
+D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\ShoppingCartSummary\Default.cshtml.g.cs
+D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_header.cshtml.g.cs
+D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
+D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_footer.cshtml.g.cs
+D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryMenu\Default.cshtml.g.cs

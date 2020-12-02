@@ -1,0 +1,24 @@
+﻿@model ShoppingCartViewModel
+@{
+    ViewData["Title"] = "Default";
+}
+
+@{
+    var cartItemsAmount = Model.ShoppingCart.ShoppingCartItems.Count;
+ 
+    
+        <a asp-controller="ShoppingCart" asp-action="Index" class="mr-2">
+
+            <div class="rounded-pill cart-sticker">
+                <span>
+                    <i class="fas fa-cart-plus" style="color:white"></i>
+                </span>
+                <span id="cart-status" style="color:antiquewhite">
+                    @cartItemsAmount
+                </span>
+            </div>
+       
+        </a>
+ 
+}
+    

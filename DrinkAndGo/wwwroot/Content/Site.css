@@ -1,4 +1,24 @@
-﻿﻿#cartButton {
+﻿@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+body {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: 'Cinzel', serif;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.cart-sticker{
+    height:40px;
+    width:43px;
+    display:flex; 
+    justify-content: space-around; 
+    align-items:center;
+    background-color:seagreen
+}
+﻿#cartButton {
     margin-right: 8px;
 }
 
@@ -50,7 +70,13 @@ a.remove {
     min-width: 100%;
 }
 
-
+.card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: 0.3s ease-in-out;
+}
+.card:hover {
+    transform:scale(1.03);
+}
 
 .card-img-top {
     width: 100%;
@@ -72,3 +98,12 @@ a.remove {
     color:forestgreen
 }
 
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}

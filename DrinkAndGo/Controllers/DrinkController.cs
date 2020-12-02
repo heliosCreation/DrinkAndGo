@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DrinkAndGo.Data.Interfaces;
+using DrinkAndGo.Data.Models;
 using DrinkAndGo.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,11 +19,32 @@ namespace DrinkAndGo.Controllers
             _drinkRepository = drinkRepository;
             _categoryRepository = categoryRepository;
         }
-        public ViewResult List()
+
+        [Route("List/{category?}", Name = "GetDrinks")]
+        public ViewResult List(string category)
         {
             DrinkListViewModel vm = new DrinkListViewModel();
-            vm.Drinks = _drinkRepository.Drinks;
+
+            if (string.IsNullOrEmpty(category))
+            {
+                vm.Drinks = _drinkRepository.Drinks;
+                vm.Category = "All Drinks";
+            }
+            else
+            {
+                if (string.Equals("Alcoholic",category,StringComparison.OrdinalIgnoreCase))
+                {
+                    vm.Drinks = _drinkRepository.Drinks.Where(drink => drink.Category.Name == category);
+                }
+                else
+                {
+                    vm.Drinks = _drinkRepository.Drinks.Where(drink => drink.CategoryId == 2);
+                }
+                vm.Category = category;
+
+            }
             return View(vm);
+
         }
     }
 }

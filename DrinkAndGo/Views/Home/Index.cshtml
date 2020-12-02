@@ -1,7 +1,18 @@
-﻿
+﻿@model HomeViewModel
 @{
     ViewData["Title"] = "Index";
 }
+<div class="container">
+    <div class="row">
+        @Html.PartialAsync("_Carousel").Result
+    </div>
+<h2>Prefered drinks of the week</h2>
+<h4>Client preferences - Just for you !</h4>
 
-<h1>Index</h1>
-
+<div class="row">
+    @foreach (var drink in Model.PreferredDrinks)
+    {
+        @Html.PartialAsync("_drinkcard", drink).Result
+    }
+</div>
+</div>

@@ -25,5 +25,10 @@ namespace DrinkAndGo.Controllers
             };
             return View(homeVm);
         }
+
+        public ViewResult AboutUs()
+        {
+            return View();
+        }
     }
 }

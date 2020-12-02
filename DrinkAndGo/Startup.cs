@@ -38,7 +38,7 @@ namespace DrinkAndGo
             services.AddTransient<ICategoryRepository, CategoryRepository>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped(sp => ShoppingCart.GetCart(sp));
+            services.AddScoped(sc => ShoppingCart.GetCart(sc));
 
             services.AddControllersWithViews();
             services.AddMvc();
@@ -60,12 +60,14 @@ namespace DrinkAndGo
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                //endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute(
+                    name: "Default",
+                    pattern:"{controller=Home}/{action=Index}/{id?}"
+                    );
+
             });
+
 
             DbInitializer.Seed(serviceProvider);
 

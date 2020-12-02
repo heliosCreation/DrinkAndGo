@@ -1,9 +1,9 @@
 ﻿@model Drink
 
 <div class="col-lg-4 col-sm-12 col-md-6 align-content-center mb-4">
-    <div class="card text-center">
+    <div class="card text-center" style=" height: 31rem;">
 
-        <img class="card-img-top" src="@Model.ImageThumbnailUrl" alt="" />
+        <img class="card-img-top" style="height:50%" src="@Model.ImageThumbnailUrl" alt="" />
 
         <div class="card-body">
             <h5>@(Model.CategoryId == 1? "Alcoholic" : "Non-alcoholic")</h5>
