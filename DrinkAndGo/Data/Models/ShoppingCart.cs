@@ -88,14 +88,23 @@ namespace DrinkAndGo.Data.Models
                 s => s.Drink.Id == drink.Id && s.ShoppingCartId == ShoppingCartId);
         }
 
-        public async Task<List<ShoppingCartItem>> GetAllShoppingCartItems()
+
+        public async Task<List<ShoppingCartItem>> GetShoppingCartItems()
         {
-            return ShoppingCartItems ??  (ShoppingCartItems = await _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId).ToListAsync());
+            return await _appDbContext.ShoppingCartItems.Where(sc => sc.ShoppingCartId == ShoppingCartId)
+                .Select(shoppingCartItem => new ShoppingCartItem()
+                {
+                    ShoppingCartItemId = shoppingCartItem.ShoppingCartItemId,
+                    Amount = shoppingCartItem.Amount,
+                    ShoppingCartId = shoppingCartItem.ShoppingCartId,
+                    Drink = shoppingCartItem.Drink
+
+                }).ToListAsync();
         }
 
         public async Task clearCart()
         {
-            var shoppingCartItems = GetAllShoppingCartItems();
+            var shoppingCartItems = GetShoppingCartItems();
             _appDbContext.ShoppingCartItems.RemoveRange(ShoppingCartItems);
 
             await _appDbContext.SaveChangesAsync();

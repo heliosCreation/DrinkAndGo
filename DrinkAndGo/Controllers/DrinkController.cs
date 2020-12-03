@@ -34,7 +34,7 @@ namespace DrinkAndGo.Controllers
             {
                 if (string.Equals("Alcoholic",category,StringComparison.OrdinalIgnoreCase))
                 {
-                    vm.Drinks = _drinkRepository.Drinks.Where(drink => drink.Category.Name == category);
+                    vm.Drinks = _drinkRepository.Drinks.Where(drink => drink.CategoryId == 1);
                 }
                 else
                 {

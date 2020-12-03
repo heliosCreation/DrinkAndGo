@@ -156,3 +156,5 @@ D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_hea
 D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
 D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_footer.cshtml.g.cs
 D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryMenu\Default.cshtml.g.cs
+D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Order\Checkout.cshtml.g.cs
+D:\WEB\ASP\DrinkAndGo\DrinkAndGo\obj\Debug\netcoreapp3.1\Razor\Views\Order\CheckoutComplete.cshtml.g.cs

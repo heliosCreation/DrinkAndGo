@@ -19,7 +19,7 @@ namespace DrinkAndGo.Component
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            _shoppingCart.ShoppingCartItems = await _shoppingCart.GetAllShoppingCartItems();
+            _shoppingCart.ShoppingCartItems = await _shoppingCart.GetShoppingCartItems();
             var shoppingCartViewModel = new ShoppingCartViewModel()
             {
                 ShoppingCart = _shoppingCart,

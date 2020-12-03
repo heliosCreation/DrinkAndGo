@@ -39,6 +39,7 @@ namespace DrinkAndGo
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sc => ShoppingCart.GetCart(sc));
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             services.AddControllersWithViews();
             services.AddMvc();

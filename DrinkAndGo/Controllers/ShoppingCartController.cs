@@ -23,7 +23,7 @@ namespace DrinkAndGo.Controllers
 
         public async Task<ViewResult> Index()
         {
-            _shoppingCart.ShoppingCartItems = await _shoppingCart.GetAllShoppingCartItems();
+            _shoppingCart.ShoppingCartItems = await _shoppingCart.GetShoppingCartItems();
             var cartViewModel = new ShoppingCartViewModel()
             {
                 ShoppingCart = _shoppingCart,
